@@ -8,5 +8,5 @@
 - Desafio 03 - Palíndromo
 [Acesse o desafio 3](https://github.com/fernandokerico/DesafioJavaScript/blob/main/pal%C3%ADndromo)
 
-
-
+- Desafio 04 - Pedra, Papel e Tesoura
+[Acesse o desafio 4](https://github.com/fernandokerico/DesafioJavaScript/blob/main/PedraPapelTesoura)

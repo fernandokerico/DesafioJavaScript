@@ -1,0 +1,43 @@
+/* 3️⃣ Verificar se uma String é um Palíndromo
+📌 Descrição:
+Uma palavra ou frase é considerada um palíndromo quando pode ser lida da mesma forma de trás para frente, ignorando espaços e acentos
+
+📌 Instruções:
+
+Remova espaços e transforme tudo para letras minúsculas antes da verificação.
+Retorne true se for palíndromo e false caso contrário.
+💡 Exemplo de Entrada e Saída:
+
+input: "arara"
+output: true
+
+input: "A base do teto desaba"
+output: true
+
+input: "xpto"
+output: false */
+
+let listaPalavras = [];
+
+function ePalindromo(palavra) {
+    if (typeof palavra !== "string") {
+        return "valor invalido";
+    }
+
+    let palavraInvertida = palavra.split('').reverse().join('');
+    return palavraInvertida === palavra;
+}
+
+listaPalavras.forEach((palavra) => {
+    if (ePalindromo(palavra) === true) {
+        console.log("A palavra:", palavra, "é um palíndromo.");
+    } else {
+        console.log("A palavra:", palavra, "NÃO é um palíndromo.");
+    }
+});
+
+console.log(ePalindromo("acasasaca")); 
+console.log(ePalindromo("ovo"));
+console.log(ePalindromo("fernando"));
+console.log(ePalindromo("java"));
+console.log(ePalindromo(3));

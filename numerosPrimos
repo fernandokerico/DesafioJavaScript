@@ -1,0 +1,41 @@
+/* 
+2️⃣ Verificar se um Número é Primo
+📌 Descrição:
+Crie uma função que verifica se um número é primo.
+
+📌 Instruções:
+
+Um número primo é aquele que só pode ser dividido por 1 e por ele mesmo.
+Retorne true se for primo e false caso contrário.
+Uma mensagem de erro deve ser retornada quando um valor invalido for enviado.
+💡 Exemplo de Entrada e Saída:
+
+input: 7
+output: true
+
+input: 10
+output: false
+
+input: "xpto"
+output: "valor invalido detectado" */
+ 
+function numPrimo(numero){
+    if (typeof numero !== "number") {
+        return "esse valor é invalido";
+    }    
+    if (numero < 2)
+        return false;
+    
+    for (let i = 2; i <= numero / 2; i++) {
+        if (numero % i === 0) {
+            return false; 
+        }
+    }
+
+    return true; 
+}
+
+console.log(numPrimo(7)); 
+console.log(numPrimo(10));  
+console.log(numPrimo(2)); 
+console.log(numPrimo("fer"));

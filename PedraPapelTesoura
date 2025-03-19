@@ -1,0 +1,49 @@
+/* 4️⃣ Codificar o Jogo "Pedra, Papel, Tesoura"
+📌 Descrição:
+Implemente um jogo simples de "Pedra, Papel, Tesoura" onde o usuário joga contra o computador.
+
+📌 Instruções:
+
+O usuário escolhe "pedra", "papel" ou "tesoura".
+O computador escolhe aleatoriamente uma dessas opções.
+O jogo segue as regras clássicas:
+Pedra ganha de Tesoura
+Tesoura ganha de Papel
+Papel ganha de Pedra
+💡 Exemplo de Entrada e Saída:
+
+input: "pedra"
+*cpu escolheu tesoura*
+output: Você ganhou!
+
+input: "papel"
+*cpu escolheu papel*
+output: Empate!
+
+input: "tesoura"
+*cpu escolheu pedra*
+output: Você perdeu! */
+
+function jogar(escolhaJogador) {
+    let opcoes = ["pedra", "papel", "tesoura"];
+    let escolhaComputador = opcoes[Math.floor(Math.random() * 3)];
+
+    console.log("Jogador: " + escolhaJogador);
+    console.log("Computador: " + escolhaComputador);
+
+    if (escolhaJogador === escolhaComputador) {
+        return "Deu empate!";
+    } else if (
+        (escolhaJogador === "pedra" && escolhaComputador === "tesoura") ||
+        (escolhaJogador === "tesoura" && escolhaComputador === "papel") ||
+        (escolhaJogador === "papel" && escolhaComputador === "pedra")
+    ) {
+        return "Parabéns! Você ganhou!";
+    } else {
+        return "Você perdeu.";
+    }
+}
+
+// console.log(jogar("pedra"));
+// console.log(jogar("papel"));
+ console.log(jogar("tesoura"));
